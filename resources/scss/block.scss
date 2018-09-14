@@ -13,7 +13,6 @@ $breakpoints: (
 
     .section__container {
         margin: auto;
-        background: red;
     }
 
     /**
@@ -35,8 +34,6 @@ $breakpoints: (
             @media (min-width: $breakpoint) {
                 .section,
                 .section__container {
-                    padding-left: 0;
-                    padding-right: 0;
                     max-width: $container;
                 }
             }
@@ -75,5 +72,39 @@ $breakpoints: (
         .section__container {
             max-width: 100%;
         }
+    }
+
+    /**
+     * Content Alignment
+     */
+    [class*="section__justify_content--"] {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -$gutter;
+        margin-right: -$gutter;
+    }
+
+    .section__justify_content--left {
+        justify-content: left;
+    }
+
+    .section__justify_content--center {
+        justify-content: center;
+    }
+
+    .section__justify_content--right {
+        justify-content: right;
+    }
+
+    .section__justify_content--space_between {
+        justify-content: space-between;
+    }
+
+    .section__justify_content--space_around {
+        justify-content: space-around;
+    }
+
+    .section__alignment--space_evenly {
+        justify-content: space-evenly;
     }
 }
