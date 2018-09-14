@@ -1,0 +1,7 @@
+{{ asset_add("styles.css", "anomaly.extension.section_block::scss/block.scss") }}
+
+<div class="section__container">
+    <div class="section">
+        {{ block.content.render()|raw }}
+    </div>
+</div>
