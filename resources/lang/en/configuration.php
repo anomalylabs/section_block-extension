@@ -1,7 +1,15 @@
 <?php
 
 return [
-    'layout'          => [
+    'height'           => [
+        'name'         => 'Height',
+        'instructions' => 'Specify the section height. Defaults to <strong>auto</strong>.',
+    ],
+    'background_color' => [
+        'name'         => 'Background Color',
+        'instructions' => 'Specify the background color.',
+    ],
+    'layout'           => [
         'name'         => 'Layout',
         'instructions' => 'Specify the section layout.',
         'option'       => [
@@ -10,7 +18,17 @@ return [
             'stretched'  => 'Stretched',
         ],
     ],
-    'justify_content' => [
+    'background'       => [
+        'name'         => 'Background',
+        'instructions' => 'Specify the background style.',
+        'option'       => [
+            'default'  => 'Default',
+            'tiled'    => 'Tiled',
+            'cover'    => 'Cover',
+            'parallax' => 'Parallax',
+        ],
+    ],
+    'justify_content'  => [
         'name'         => 'Justify Content',
         'instructions' => 'Specify the content justification.',
         'option'       => [
@@ -21,6 +39,15 @@ return [
             'space_between' => 'Space Between',
             'space_around'  => 'Space Around',
             'space_evenly'  => 'Space Evenly',
+        ],
+    ],
+    'alignment'        => [
+        'name'         => 'Vertical Alignment',
+        'instructions' => 'Specify the vertical content alignment.',
+        'option'       => [
+            'top'    => 'Top',
+            'middle' => 'Middle',
+            'bottom' => 'Bottom',
         ],
     ],
 ];

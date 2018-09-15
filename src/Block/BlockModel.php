@@ -20,5 +20,6 @@ class BlockModel extends SectionBlockBlocksEntryModel implements BlockInterface
      */
     protected $with = [
         'content',
+        'backgroundImage',
     ];
 }

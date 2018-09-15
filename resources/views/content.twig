@@ -1,9 +1,24 @@
 {{ asset_add("styles.css", "anomaly.extension.section_block::scss/block.scss") }}
 
-<div class="section__container">
+<style type="text/css">
+    #block--{{ block.id }} .section__container {
+        height: {{ block.height.value ?: 'auto' }};
+        background-image: {{ block.background_image.make.css ?: 'none' }};
+        background-color: {{ block.background_color.value ?: 'transparent' }};
+    }
+</style>
+
+<div class="
+    section__container
+    section__alignment--{{ block.alignment.key }}
+    section__background--{{ block.background.key }}
+    section__justify_content--{{ block.justify_content.key }}
+    ">
+
     <div class="section">
-        <div class="section__content section__justify_content--{{ block.justify_content.key }}">
+        <div class="section__content">
             {{ block.content.render()|raw }}
         </div>
     </div>
+
 </div>

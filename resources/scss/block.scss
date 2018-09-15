@@ -1,18 +1,30 @@
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
 $gutter: 15px;
 $breakpoints: (
-        768px: 720px,
-        992px: 940px,
-        1200px: 1140px
+        $small: 720px,
+        $medium: 940px,
+        $large: 1140px
 );
 
 .block--section_block {
 
     .section {
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .section__container {
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (min-width: $small) {
+        .section__content {
+            margin-left: -$gutter;
+            margin-right: -$gutter;
+        }
     }
 
     /**
@@ -75,36 +87,88 @@ $breakpoints: (
     }
 
     /**
-     * Content Alignment
+     * Content Justification
      */
     [class*="section__justify_content--"] {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -$gutter;
-        margin-right: -$gutter;
+        .section__content {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
     .section__justify_content--left {
-        justify-content: left;
+        .section__content {
+            justify-content: left;
+        }
     }
 
     .section__justify_content--center {
-        justify-content: center;
+        .section__content {
+            justify-content: center;
+        }
     }
 
     .section__justify_content--right {
-        justify-content: right;
+        .section__content {
+            justify-content: right;
+        }
     }
 
     .section__justify_content--space_between {
-        justify-content: space-between;
+        .section__content {
+            justify-content: space-between;
+        }
     }
 
     .section__justify_content--space_around {
-        justify-content: space-around;
+        .section__content {
+            justify-content: space-around;
+        }
     }
 
     .section__alignment--space_evenly {
-        justify-content: space-evenly;
+        .section__content {
+            justify-content: space-evenly;
+        }
+    }
+
+    /**
+     * Content Alignment
+     */
+    [class*="section__alignment--"] {
+        display: flex;
+    }
+
+    .section__alignment--top {
+        align-items: flex-start;
+    }
+
+    .section__alignment--middle {
+        align-items: center;
+    }
+
+    .section__alignment--bottom {
+        align-items: flex-end;
+    }
+
+    /**
+     * Background Styles
+     */
+    [class*="section__background--"] {
+
+    }
+
+    .section__background--tiled {
+        background-repeat: repeat;
+    }
+
+    .section__background--cover {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .section__background--parallax {
+        background-size: cover;
+        background-attachment: fixed;
     }
 }

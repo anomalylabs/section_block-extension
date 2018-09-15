@@ -28,6 +28,7 @@ class AnomalyExtensionSectionBlockCreateBlocksStream extends Migration
      */
     protected $assignments = [
         'content',
+        'background_image',
     ];
 
 }
