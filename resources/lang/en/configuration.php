@@ -19,7 +19,7 @@ return [
         ],
     ],
     'background'       => [
-        'name'         => 'Background',
+        'name'         => 'Background Style',
         'instructions' => 'Specify the background style.',
         'option'       => [
             'default'  => 'Default',
