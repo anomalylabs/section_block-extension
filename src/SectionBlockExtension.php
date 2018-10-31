@@ -18,7 +18,7 @@ class SectionBlockExtension extends BlockExtension
      *
      * @var string
      */
-    protected $category = 'structural';
+    protected $category = 'layout';
 
     /**
      * This extension provides a simple
