@@ -14,6 +14,13 @@ class SectionBlockExtension extends BlockExtension
 {
 
     /**
+     * The block category.
+     *
+     * @var string
+     */
+    protected $category = 'structural';
+
+    /**
      * This extension provides a simple
      * section block for the blocks module.
      *
