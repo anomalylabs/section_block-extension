@@ -1,0 +1,57 @@
+&.section_block--standard {
+
+    .section {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+
+    .section,
+    .section__container {
+        max-width: 100%;
+    }
+
+    @each $breakpoint, $container in $breakpoints {
+        @media (min-width: $breakpoint) {
+            .section,
+            .section__container {
+                max-width: 100%;
+                width: $container;
+            }
+        }
+    }
+}
+
+&.section_block--full_width {
+
+    .section {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+
+    .section,
+    .section__container {
+        max-width: 100%;
+    }
+
+    @each $breakpoint, $container in $breakpoints {
+        @media (min-width: $breakpoint) {
+            .section {
+                max-width: 100%;
+                width: $container + ($gutter * 2);
+            }
+        }
+    }
+}
+
+&.section_block--stretched {
+
+    .section {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+
+    .section,
+    .section__container {
+        max-width: 100%;
+    }
+}

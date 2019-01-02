@@ -1,16 +1,4 @@
-{{ asset_add("styles.css", "anomaly.extension.section_block::css/block.css") }}
-
-<style type="text/css">
-    #block--{{ block.id }} .section__container {
-        height: {{ block.height.value ?: 'auto' }};
-        background-image: {{ block.background_image.make.css ?: 'none' }};
-        background-color: {{ block.background_color.value ?: 'transparent' }};
-    }
-
-    #block--{{ block.id }} .section__content {
-        z-index: 5;
-    }
-</style>
+{% include "anomaly.extension.section_block::style" %}
 
 <div class="
     section__container
@@ -19,10 +7,32 @@
     section__justify_content--{{ block.justify_content.key }}
     ">
 
+    {% if block.top_divider %}
+        <div class="
+            section__divider
+            section__divider--top
+            section__divider--arrange_{{ block.top_divider_arrangement.key }}
+        ">
+            {{ img(block.top_divider.key).data|raw }}
+        </div>
+    {% endif %}
+
+
     <div class="section">
         <div class="section__content">
             {{ block.content.render()|raw }}
         </div>
     </div>
+
+
+    {% if block.bottom_divider %}
+        <div class="
+            section__divider
+            section__divider--bottom
+            section__divider--arrange_{{ block.bottom_divider_arrangement.key }}
+        ">
+            {{ img(block.bottom_divider.key).data|raw }}
+        </div>
+    {% endif %}
 
 </div>

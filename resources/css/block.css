@@ -1,7 +1,5 @@
 .block--section_block {
-  /**
-   * Section Sizes
-   */
+  overflow: hidden;
   /**
    * Content Justification
    */
@@ -14,13 +12,16 @@
 }
 
 .block--section_block .section {
+  z-index: 10;
   margin-left: auto;
   margin-right: auto;
 }
 
 .block--section_block .section__container {
+  min-height: 250px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -43,21 +44,24 @@
 @media (min-width: 768px) {
   .block--section_block.section_block--standard .section,
   .block--section_block.section_block--standard .section__container {
-    max-width: 720px;
+    max-width: 100%;
+    width: 720px;
   }
 }
 
 @media (min-width: 992px) {
   .block--section_block.section_block--standard .section,
   .block--section_block.section_block--standard .section__container {
-    max-width: 940px;
+    max-width: 100%;
+    width: 940px;
   }
 }
 
 @media (min-width: 1200px) {
   .block--section_block.section_block--standard .section,
   .block--section_block.section_block--standard .section__container {
-    max-width: 1140px;
+    max-width: 100%;
+    width: 1140px;
   }
 }
 
@@ -73,19 +77,22 @@
 
 @media (min-width: 768px) {
   .block--section_block.section_block--full_width .section {
-    max-width: 750px;
+    max-width: 100%;
+    width: 750px;
   }
 }
 
 @media (min-width: 992px) {
   .block--section_block.section_block--full_width .section {
-    max-width: 970px;
+    max-width: 100%;
+    width: 970px;
   }
 }
 
 @media (min-width: 1200px) {
   .block--section_block.section_block--full_width .section {
-    max-width: 1170px;
+    max-width: 100%;
+    width: 1170px;
   }
 }
 
@@ -97,6 +104,41 @@
 .block--section_block.section_block--stretched .section,
 .block--section_block.section_block--stretched .section__container {
   max-width: 100%;
+}
+
+.block--section_block .section__divider {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: absolute;
+  /**
+   * Arrangement
+   */
+  /**
+   * Positions
+   */
+}
+
+.block--section_block .section__divider svg {
+  width: 100%;
+}
+
+.block--section_block .section__divider.section__divider--arrange_top {
+  z-index: 10;
+}
+
+.block--section_block .section__divider.section__divider--arrange_bottom {
+  z-index: 1;
+}
+
+.block--section_block .section__divider.section__divider--top {
+  top: 0;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.block--section_block .section__divider.section__divider--bottom {
+  bottom: 0;
 }
 
 .block--section_block [class*=section__justify_content--] .section__content {

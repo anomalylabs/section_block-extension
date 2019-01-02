@@ -1,0 +1,33 @@
+.section__divider {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: absolute;
+
+    svg {
+        width: 100%;
+    }
+
+    /**
+     * Arrangement
+     */
+    &.section__divider--arrange_top {
+        z-index: 10;
+    }
+
+    &.section__divider--arrange_bottom {
+        z-index: 1;
+    }
+
+    /**
+     * Positions
+     */
+    &.section__divider--top {
+        top: 0;
+        transform: scaleY(-1);
+    }
+
+    &.section__divider--bottom {
+        bottom: 0;
+    }
+}

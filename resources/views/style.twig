@@ -1,0 +1,53 @@
+<style type="text/css">
+
+    /**
+     * Positioning
+     */
+    .block--{{ block.id }} {
+        margin-top: {{ block.margin_top.value ?: 0 }}px;
+        margin-bottom: {{ block.margin_bottom.value ?: 0 }}px;
+        margin-left: {{ block.margin_left.value ?: 0 }}px;
+        margin-right: {{ block.margin_right.value ?: 0 }}px;
+
+        border-top-left-radius: {{ block.border_radius_top_left.value ?: 0 }}px;
+        border-top-right-radius: {{ block.border_radius_top_right.value ?: 0 }}px;
+        border-bottom-left-radius: {{ block.border_radius_bottom_left.value ?: 0 }}px;
+        border-bottom-right-radius: {{ block.border_radius_bottom_right.value ?: 0 }}px;
+    }
+
+    /**
+     * Layout
+     */
+    .block--{{ block.id }} .section__container {
+        height: {{ block.height.value ?: 'auto' }};
+        background-image: {{ block.background_image.make.css ?: 'none' }};
+        background-color: {{ block.background_color.value ?: 'transparent' }};
+
+        padding-top: {{ block.padding_top.value ?: 0 }}px;
+        padding-bottom: {{ block.padding_bottom.value ?: 0 }}px;
+        padding-left: {{ block.padding_left.value ?: 0 }}px;
+        padding-right: {{ block.padding_right.value ?: 0 }}px;
+    }
+
+    /**
+     * Divider
+     */
+    .block--{{ block.id }} .section__divider--top svg path {
+        fill: {{ block.top_divider_color.value ?: '#ffffff' }};
+    }
+
+    .block--{{ block.id }} .section__divider--top {
+        height: {{ block.top_divider_height.value ?: 'initial' }};
+        transform: scaleX({{ block.top_divider_flip_horizontally.value ? '-1' : 1 }});
+    }
+
+    .block--{{ block.id }} .section__divider--bottom svg path {
+        fill: {{ block.bottom_divider_color.value ?: '#ffffff' }};
+    }
+
+    .block--{{ block.id }} .section__divider--bottom {
+        height: {{ block.bottom_divider_height.value ?: 'initial' }};
+        transform: scaleX({{ block.bottom_divider_flip_horizontally.value ? '-1' : 1 }});
+    }
+
+</style>

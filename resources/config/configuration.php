@@ -1,9 +1,41 @@
 <?php
 
 return [
-    'height'           => 'anomaly.field_type.text',
-    'background_color' => 'anomaly.field_type.colorpicker',
-    'layout'           => [
+    'height' => \Anomaly\BlocksModule\Block\Style\HeightFieldType::class,
+
+    'margin_top'    => \Anomaly\BlocksModule\Block\Style\MarginFieldType::class,
+    'margin_left'   => \Anomaly\BlocksModule\Block\Style\MarginFieldType::class,
+    'margin_right'  => \Anomaly\BlocksModule\Block\Style\MarginFieldType::class,
+    'margin_bottom' => \Anomaly\BlocksModule\Block\Style\MarginFieldType::class,
+
+    'padding_top'    => \Anomaly\BlocksModule\Block\Style\PaddingFieldType::class,
+    'padding_left'   => \Anomaly\BlocksModule\Block\Style\PaddingFieldType::class,
+    'padding_right'  => \Anomaly\BlocksModule\Block\Style\PaddingFieldType::class,
+    'padding_bottom' => \Anomaly\BlocksModule\Block\Style\PaddingFieldType::class,
+
+    'border_radius_top_left'     => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
+    'border_radius_top_right'    => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
+    'border_radius_bottom_left'  => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
+    'border_radius_bottom_right' => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
+
+    'background_image' => \Anomaly\BlocksModule\Block\Style\BackgroundImageFieldType::class,
+    'background_color' => \Anomaly\BlocksModule\Block\Style\BackgroundColorFieldType::class,
+
+    'top_divider'             => \Anomaly\BlocksModule\Block\Style\DividerFieldType::class,
+    'top_divider_color'       => \Anomaly\BlocksModule\Block\Style\DividerColorFieldType::class,
+    'top_divider_arrangement' => \Anomaly\BlocksModule\Block\Style\DividerArrangementFieldType::class,
+
+    'bottom_divider'                   => \Anomaly\BlocksModule\Block\Style\DividerFieldType::class,
+    'bottom_divider_color'             => \Anomaly\BlocksModule\Block\Style\DividerColorFieldType::class,
+    'bottom_divider_arrangement'       => \Anomaly\BlocksModule\Block\Style\DividerArrangementFieldType::class,
+    'bottom_divider_flip_horizontally' => \Anomaly\BlocksModule\Block\Style\DividerFlipHorizontallyFieldType::class,
+
+    'css_id'     => \Anomaly\BlocksModule\Block\Style\CssIdFieldType::class,
+    'css_class'  => \Anomaly\BlocksModule\Block\Style\CssClassFieldType::class,
+    'custom_js'  => \Anomaly\BlocksModule\Block\Style\CustomJsFieldType::class,
+    'custom_css' => \Anomaly\BlocksModule\Block\Style\CustomCssFieldType::class,
+
+    'layout'          => [
         'type'     => 'anomaly.field_type.select',
         'required' => true,
         'config'   => [
@@ -15,20 +47,7 @@ return [
             ],
         ],
     ],
-    'background'       => [
-        'type'     => 'anomaly.field_type.select',
-        'required' => true,
-        'config'   => [
-            'default_value' => 'default',
-            'options'       => [
-                'default'  => 'anomaly.extension.section_block::configuration.background.option.default',
-                'tiled'    => 'anomaly.extension.section_block::configuration.background.option.tiled',
-                'cover'    => 'anomaly.extension.section_block::configuration.background.option.cover',
-                'parallax' => 'anomaly.extension.section_block::configuration.background.option.parallax',
-            ],
-        ],
-    ],
-    'justify_content'  => [
+    'justify_content' => [
         'type'     => 'anomaly.field_type.select',
         'required' => true,
         'config'   => [
@@ -44,7 +63,7 @@ return [
             ],
         ],
     ],
-    'alignment'        => [
+    'alignment'       => [
         'type'     => 'anomaly.field_type.select',
         'required' => true,
         'config'   => [

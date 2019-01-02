@@ -1,6 +1,14 @@
+<style type="text/css">
+    {{ block.custom_css.render|raw }}
+</style>
+
 <div
-        id="block--{{ block.id }}"
-        class="block block--{{ block.extension.value.slug }} {{ block.extension.value.slug }}--{{ block.layout.key }}">
+        id="{{ block.css_id }}"
+        class="
+            block block--{{ block.id }}
+            block--{{ block.extension.value.slug }}
+            {{ block.extension.value.slug }}--{{ block.layout.key }}
+        ">
 
     {% if block.title.value and not block.display_title.isFalse() %}
         <h3 class="block__title">
@@ -13,3 +21,7 @@
     </div>
 
 </div>
+
+<script type="text/javascript">
+    {{ block.custom_js.render|raw }}
+</script>
