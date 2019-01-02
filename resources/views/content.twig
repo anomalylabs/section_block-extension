@@ -1,10 +1,14 @@
-{{ asset_add("styles.css", "anomaly.extension.section_block::scss/block.scss") }}
+{{ asset_add("styles.css", "anomaly.extension.section_block::css/block.css") }}
 
 <style type="text/css">
     #block--{{ block.id }} .section__container {
         height: {{ block.height.value ?: 'auto' }};
         background-image: {{ block.background_image.make.css ?: 'none' }};
         background-color: {{ block.background_color.value ?: 'transparent' }};
+    }
+
+    #block--{{ block.id }} .section__content {
+        z-index: 5;
     }
 </style>
 

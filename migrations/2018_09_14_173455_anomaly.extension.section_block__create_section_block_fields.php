@@ -18,8 +18,7 @@ class AnomalyExtensionSectionBlockCreateSectionBlockFields extends Migration
      * @var array
      */
     protected $fields = [
-        'content'          => 'anomaly.field_type.blocks',
-        'background_image' => 'anomaly.field_type.file',
+        'content' => 'anomaly.field_type.blocks',
     ];
 
 }
