@@ -37,10 +37,7 @@ return [
                 'fields' => [
                     'configuration_height',
 
-                    'configuration_margin_top',
-                    'configuration_margin_left',
-                    'configuration_margin_right',
-                    'configuration_margin_bottom',
+                    'configuration_margin',
 
                     'configuration_padding_top',
                     'configuration_padding_left',
