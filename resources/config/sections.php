@@ -43,10 +43,9 @@ return [
                 'title'  => 'anomaly.module.blocks::tab.border',
                 'fields' => [
                     'configuration_border_style',
-                    'configuration_border_radius_top_left',
-                    'configuration_border_radius_top_right',
-                    'configuration_border_radius_bottom_left',
-                    'configuration_border_radius_bottom_right',
+                    'configuration_border_color',
+                    'configuration_border_width',
+                    'configuration_border_radius',
                 ],
             ],
             'visibility' => [

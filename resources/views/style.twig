@@ -4,35 +4,64 @@
      * Positioning & Visibility
      */
     .block--{{ block.id }} {
-        margin-top: {{ block.desktop_margin_top.value }};
-        margin-left: {{ block.desktop_margin_left.value }};
-        margin-right: {{ block.desktop_margin_right.value }};
-        margin-bottom: {{ block.desktop_margin_bottom.value }};
+        border-style: {{ block.border_style.key }};
+        border-color: {{ block.default_border_color.value ?: 'transparent' }};
+
+        margin-top: {{ block.desktop_margin_top.value ?: 0 }};
+        margin-left: {{ block.desktop_margin_left.value ?: 0 }};
+        margin-right: {{ block.desktop_margin_right.value ?: 0 }};
+        margin-bottom: {{ block.desktop_margin_bottom.value ?: 0 }};
+        border-top-width: {{ block.desktop_border_width_top.value ?: 0 }};
+        border-left-width: {{ block.desktop_border_width_left.value ?: 0 }};
+        border-right-width: {{ block.desktop_border_width_right.value ?: 0 }};
+        border-bottom-width: {{ block.desktop_border_width_bottom.value ?: 0 }};
+        border-top-left-radius: {{ block.desktop_border_top_left_radius.value ?: 0 }};
+        border-top-right-radius: {{ block.desktop_border_top_right_radius.value ?: 0 }};
+        border-bottom-left-radius: {{ block.desktop_border_bottom_left_radius.value ?: 0 }};
+        border-bottom-right-radius: {{ block.desktop_border_bottom_right_radius.value ?: 0 }};
         visibility: {{ 'desktop' in block.responsive_visibility.keys ? 'hidden' : 'visible' }};
         display: {{ 'desktop' in block.responsive_visibility.keys ? 'none' : 'inherit' }};
-        border-top-left-radius: {{ block.border_radius_top_left.value ?: 0 }}px;
-        border-top-right-radius: {{ block.border_radius_top_right.value ?: 0 }}px;
-        border-bottom-left-radius: {{ block.border_radius_bottom_left.value ?: 0 }}px;
-        border-bottom-right-radius: {{ block.border_radius_bottom_right.value ?: 0 }}px;
+
+        transition: all 300ms ease;
     }
 
-    @media (min-width: 480px) {
+    .block--{{ block.id }}:hover {
+        border-color: {{ block.hover_border_color.value ?: 'transparent' }};
+    }
+
+    @media (max-width: 480px) {
         .block--{{ block.id }} {
             margin-top: {{ block.phone_margin_top.value }};
             margin-left: {{ block.phone_margin_left.value }};
             margin-right: {{ block.phone_margin_right.value }};
             margin-bottom: {{ block.phone_margin_bottom.value }};
+            border-top-width: {{ block.phone_border_width_top.value }};
+            border-left-width: {{ block.phone_border_width_left.value }};
+            border-right-width: {{ block.phone_border_width_right.value }};
+            border-bottom-width: {{ block.phone_border_width_bottom.value }};
+            border-top-left-radius: {{ block.phone_border_top_left_radius.value }};
+            border-top-right-radius: {{ block.phone_border_top_right_radius.value }};
+            border-bottom-left-radius: {{ block.phone_border_bottom_left_radius.value }};
+            border-bottom-right-radius: {{ block.phone_border_bottom_right_radius.value }};
             visibility: {{ 'phone' in block.responsive_visibility.keys ? 'hidden' : 'visible' }};
             display: {{ 'phone' in block.responsive_visibility.keys ? 'none' : 'inherit' }};
         }
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
         .block--{{ block.id }} {
             margin-top: {{ block.tablet_margin_top.value }};
             margin-left: {{ block.tablet_margin_left.value }};
             margin-right: {{ block.tablet_margin_right.value }};
             margin-bottom: {{ block.tablet_margin_bottom.value }};
+            border-top-width: {{ block.tablet_border_width_top.value }};
+            border-left-width: {{ block.tablet_border_width_left.value }};
+            border-right-width: {{ block.tablet_border_width_right.value }};
+            border-bottom-width: {{ block.tablet_border_width_bottom.value }};
+            border-top-left-radius: {{ block.tablet_border_top_left_radius.value }};
+            border-top-right-radius: {{ block.tablet_border_top_right_radius.value }};
+            border-bottom-left-radius: {{ block.tablet_border_bottom_left_radius.value }};
+            border-bottom-right-radius: {{ block.tablet_border_bottom_right_radius.value }};
             visibility: {{ 'tablet' in block.responsive_visibility.keys ? 'hidden' : 'visible' }};
             display: {{ 'tablet' in block.responsive_visibility.keys ? 'none' : 'inherit' }};
         }

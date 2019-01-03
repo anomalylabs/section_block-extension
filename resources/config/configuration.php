@@ -4,11 +4,7 @@ return array_merge(
     [
         'responsive_visibility' => \Anomaly\BlocksModule\Block\Style\HiddenFieldType::class,
 
-        'border_style'               => \Anomaly\BlocksModule\Block\Style\BorderStyleFieldType::class,
-        'border_radius_top_left'     => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
-        'border_radius_top_right'    => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
-        'border_radius_bottom_left'  => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
-        'border_radius_bottom_right' => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
+        'border_style' => \Anomaly\BlocksModule\Block\Style\BorderStyleFieldType::class,
 
         'background_image' => \Anomaly\BlocksModule\Block\Style\BackgroundImageFieldType::class,
         'background_color' => \Anomaly\BlocksModule\Block\Style\BackgroundColorFieldType::class,
@@ -69,5 +65,8 @@ return array_merge(
         ],
     ],
     \Anomaly\BlocksModule\Block\Style\MarginFieldType::fields(),
-    \Anomaly\BlocksModule\Block\Style\PaddingFieldType::fields()
+    \Anomaly\BlocksModule\Block\Style\PaddingFieldType::fields(),
+    \Anomaly\BlocksModule\Block\Style\BorderWidthFieldType::fields(),
+    \Anomaly\BlocksModule\Block\Style\BorderColorFieldType::fields(),
+    \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::fields()
 );
