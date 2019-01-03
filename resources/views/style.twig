@@ -16,10 +16,8 @@
             margin-left: {{ block.phone_margin_left.value ?: 0 }}px;
             margin-right: {{ block.phone_margin_right.value ?: 0 }}px;
             margin-bottom: {{ block.phone_margin_bottom.value ?: 0 }}px;
-            padding-top: {{ block.phone_padding_top.value ?: 0 }}px;
-            padding-left: {{ block.phone_padding_left.value ?: 0 }}px;
-            padding-right: {{ block.phone_padding_right.value ?: 0 }}px;
-            padding-bottom: {{ block.phone_padding_bottom.value ?: 0 }}px;
+            visibility: {{ 'phone' in block.responsive_visibility.keys ? 'hidden' : 'visible' }};
+            display: {{ 'phone' in block.responsive_visibility.keys ? 'none' : 'inherit' }};
         }
     }
 
@@ -29,10 +27,8 @@
             margin-left: {{ block.tablet_margin_left.value ?: 0 }}px;
             margin-right: {{ block.tablet_margin_right.value ?: 0 }}px;
             margin-bottom: {{ block.tablet_margin_bottom.value ?: 0 }}px;
-            padding-top: {{ block.tablet_padding_top.value ?: 0 }}px;
-            padding-left: {{ block.tablet_padding_left.value ?: 0 }}px;
-            padding-right: {{ block.tablet_padding_right.value ?: 0 }}px;
-            padding-bottom: {{ block.tablet_padding_bottom.value ?: 0 }}px;
+            visibility: {{ 'tablet' in block.responsive_visibility.keys ? 'hidden' : 'visible' }};
+            display: {{ 'tablet' in block.responsive_visibility.keys ? 'none' : 'inherit' }};
         }
     }
 
@@ -42,10 +38,8 @@
             margin-left: {{ block.desktop_margin_left.value ?: 0 }}px;
             margin-right: {{ block.desktop_margin_right.value ?: 0 }}px;
             margin-bottom: {{ block.desktop_margin_bottom.value ?: 0 }}px;
-            padding-top: {{ block.desktop_padding_top.value ?: 0 }}px;
-            padding-left: {{ block.desktop_padding_left.value ?: 0 }}px;
-            padding-right: {{ block.desktop_padding_right.value ?: 0 }}px;
-            padding-bottom: {{ block.desktop_padding_bottom.value ?: 0 }}px;
+            visibility: {{ 'desktop' in block.responsive_visibility.keys ? 'hidden' : 'visible' }};
+            display: {{ 'desktop' in block.responsive_visibility.keys ? 'none' : 'inherit' }};
         }
     }
 
@@ -53,14 +47,35 @@
      * Layout
      */
     .block--{{ block.id }} .section__container {
-        height: {{ block.height.value ?: 'auto' }};
         background-image: {{ block.background_image.make.css ?: 'none' }};
         background-color: {{ block.background_color.value ?: 'transparent' }};
+    }
 
-        padding-top: {{ block.padding_top.value ?: 0 }}px;
-        padding-bottom: {{ block.padding_bottom.value ?: 0 }}px;
-        padding-left: {{ block.padding_left.value ?: 0 }}px;
-        padding-right: {{ block.padding_right.value ?: 0 }}px;
+    @media (min-width: 480px) {
+        .block--{{ block.id }} .section__container {
+            padding-top: {{ block.phone_padding_top.value ?: 0 }}px;
+            padding-left: {{ block.phone_padding_left.value ?: 0 }}px;
+            padding-right: {{ block.phone_padding_right.value ?: 0 }}px;
+            padding-bottom: {{ block.phone_padding_bottom.value ?: 0 }}px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .block--{{ block.id }} .section__container {
+            padding-top: {{ block.tablet_padding_top.value ?: 0 }}px;
+            padding-left: {{ block.tablet_padding_left.value ?: 0 }}px;
+            padding-right: {{ block.tablet_padding_right.value ?: 0 }}px;
+            padding-bottom: {{ block.tablet_padding_bottom.value ?: 0 }}px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .block--{{ block.id }} .section__container {
+            padding-top: {{ block.desktop_padding_top.value ?: 0 }}px;
+            padding-left: {{ block.desktop_padding_left.value ?: 0 }}px;
+            padding-right: {{ block.desktop_padding_right.value ?: 0 }}px;
+            padding-bottom: {{ block.desktop_padding_bottom.value ?: 0 }}px;
+        }
     }
 
     /**

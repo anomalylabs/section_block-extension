@@ -5,7 +5,7 @@ return [
         'stacked' => true,
         'tabs'    => [
             'layout'     => [
-                'title'  => 'anomaly.extension.section_block::tab.layout',
+                'title'  => 'anomaly.module.blocks::tab.layout',
                 'fields' => [
                     'configuration_layout',
                     'configuration_justify_content',
@@ -13,7 +13,7 @@ return [
                 ],
             ],
             'background' => [
-                'title'  => 'anomaly.extension.section_block::tab.background',
+                'title'  => 'anomaly.module.blocks::tab.background',
                 'fields' => [
                     'configuration_background_image',
                     'configuration_background_color',
@@ -21,7 +21,7 @@ return [
                 ],
             ],
             'divider'    => [
-                'title'  => 'anomaly.extension.section_block::tab.divider',
+                'title'  => 'anomaly.module.blocks::tab.divider',
                 'fields' => [
                     'configuration_top_divider',
                     'configuration_top_divider_color',
@@ -32,22 +32,31 @@ return [
                     'configuration_bottom_divider_flip_horizontally',
                 ],
             ],
-            'style'      => [
-                'title'  => 'anomaly.extension.section_block::tab.style',
+            'spacing'    => [
+                'title'  => 'anomaly.module.blocks::tab.spacing',
                 'fields' => [
-                    'configuration_height',
-
                     'configuration_margin',
                     'configuration_padding',
-
+                ],
+            ],
+            'border'     => [
+                'title'  => 'anomaly.module.blocks::tab.border',
+                'fields' => [
+                    'configuration_border_style',
                     'configuration_border_radius_top_left',
                     'configuration_border_radius_top_right',
                     'configuration_border_radius_bottom_left',
                     'configuration_border_radius_bottom_right',
                 ],
             ],
+            'visibility' => [
+                'title'  => 'anomaly.module.blocks::tab.visibility',
+                'fields' => [
+                    'configuration_responsive_visibility',
+                ],
+            ],
             'advanced'   => [
-                'title'  => 'anomaly.extension.section_block::tab.advanced',
+                'title'  => 'anomaly.module.blocks::tab.advanced',
                 'fields' => [
                     'configuration_css_id',
                     'configuration_css_class',

@@ -2,13 +2,9 @@
 
 return array_merge(
     [
-        'height' => \Anomaly\BlocksModule\Block\Style\HeightFieldType::class,
+        'responsive_visibility' => \Anomaly\BlocksModule\Block\Style\HiddenFieldType::class,
 
-        'padding_top'    => \Anomaly\BlocksModule\Block\Style\PaddingFieldType::class,
-        'padding_left'   => \Anomaly\BlocksModule\Block\Style\PaddingFieldType::class,
-        'padding_right'  => \Anomaly\BlocksModule\Block\Style\PaddingFieldType::class,
-        'padding_bottom' => \Anomaly\BlocksModule\Block\Style\PaddingFieldType::class,
-
+        'border_style'               => \Anomaly\BlocksModule\Block\Style\BorderStyleFieldType::class,
         'border_radius_top_left'     => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
         'border_radius_top_right'    => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
         'border_radius_bottom_left'  => \Anomaly\BlocksModule\Block\Style\BorderRadiusFieldType::class,
