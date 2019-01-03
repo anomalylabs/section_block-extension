@@ -4,15 +4,49 @@
      * Positioning
      */
     .block--{{ block.id }} {
-        {#margin-top: {{ block.margin_top.value ?: 0 }}px;#}
-        {#margin-bottom: {{ block.margin_bottom.value ?: 0 }}px;#}
-        {#margin-left: {{ block.margin_left.value ?: 0 }}px;#}
-        {#margin-right: {{ block.margin_right.value ?: 0 }}px;#}
-
         border-top-left-radius: {{ block.border_radius_top_left.value ?: 0 }}px;
         border-top-right-radius: {{ block.border_radius_top_right.value ?: 0 }}px;
         border-bottom-left-radius: {{ block.border_radius_bottom_left.value ?: 0 }}px;
         border-bottom-right-radius: {{ block.border_radius_bottom_right.value ?: 0 }}px;
+    }
+
+    @media (min-width: 480px) {
+        .block--{{ block.id }} {
+            margin-top: {{ block.phone_margin_top.value ?: 0 }}px;
+            margin-left: {{ block.phone_margin_left.value ?: 0 }}px;
+            margin-right: {{ block.phone_margin_right.value ?: 0 }}px;
+            margin-bottom: {{ block.phone_margin_bottom.value ?: 0 }}px;
+            padding-top: {{ block.phone_padding_top.value ?: 0 }}px;
+            padding-left: {{ block.phone_padding_left.value ?: 0 }}px;
+            padding-right: {{ block.phone_padding_right.value ?: 0 }}px;
+            padding-bottom: {{ block.phone_padding_bottom.value ?: 0 }}px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .block--{{ block.id }} {
+            margin-top: {{ block.tablet_margin_top.value ?: 0 }}px;
+            margin-left: {{ block.tablet_margin_left.value ?: 0 }}px;
+            margin-right: {{ block.tablet_margin_right.value ?: 0 }}px;
+            margin-bottom: {{ block.tablet_margin_bottom.value ?: 0 }}px;
+            padding-top: {{ block.tablet_padding_top.value ?: 0 }}px;
+            padding-left: {{ block.tablet_padding_left.value ?: 0 }}px;
+            padding-right: {{ block.tablet_padding_right.value ?: 0 }}px;
+            padding-bottom: {{ block.tablet_padding_bottom.value ?: 0 }}px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .block--{{ block.id }} {
+            margin-top: {{ block.desktop_margin_top.value ?: 0 }}px;
+            margin-left: {{ block.desktop_margin_left.value ?: 0 }}px;
+            margin-right: {{ block.desktop_margin_right.value ?: 0 }}px;
+            margin-bottom: {{ block.desktop_margin_bottom.value ?: 0 }}px;
+            padding-top: {{ block.desktop_padding_top.value ?: 0 }}px;
+            padding-left: {{ block.desktop_padding_left.value ?: 0 }}px;
+            padding-right: {{ block.desktop_padding_right.value ?: 0 }}px;
+            padding-bottom: {{ block.desktop_padding_bottom.value ?: 0 }}px;
+        }
     }
 
     /**

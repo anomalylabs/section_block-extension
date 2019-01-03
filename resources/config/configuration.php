@@ -72,5 +72,6 @@ return array_merge(
             ],
         ],
     ],
-    \Anomaly\BlocksModule\Block\Style\MarginFieldType::fields()
+    \Anomaly\BlocksModule\Block\Style\MarginFieldType::fields(),
+    \Anomaly\BlocksModule\Block\Style\PaddingFieldType::fields()
 );

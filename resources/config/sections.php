@@ -38,11 +38,7 @@ return [
                     'configuration_height',
 
                     'configuration_margin',
-
-                    'configuration_padding_top',
-                    'configuration_padding_left',
-                    'configuration_padding_right',
-                    'configuration_padding_bottom',
+                    'configuration_padding',
 
                     'configuration_border_radius_top_left',
                     'configuration_border_radius_top_right',
