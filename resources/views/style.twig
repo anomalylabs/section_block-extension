@@ -67,10 +67,10 @@
      * Layout & Background
      */
     .block--{{ block.id }} .section__container {
-        padding-top: {{ block.desktop_padding_top.value ?: 0 }};
+        padding-top: {{ block.desktop_padding_top.value ?: '50px' }};
         padding-left: {{ block.desktop_padding_left.value ?: 0 }};
         padding-right: {{ block.desktop_padding_right.value ?: 0 }};
-        padding-bottom: {{ block.desktop_padding_bottom.value ?: 0 }};
+        padding-bottom: {{ block.desktop_padding_bottom.value ?: '50px' }};
         background-image: {{ block.background_image.make.css ?: 'none' }};
         background-color: {{ block.background_color.value ?: 'transparent' }};
     }
